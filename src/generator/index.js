@@ -1,0 +1,25 @@
+function* gen(){
+    yield 1;
+    yield 2;
+    yield 3;
+}
+
+const g = gen();
+
+console.log(g.next().value);
+console.log(g.next().value);
+console.log(g.next().value);
+
+
+// Recorrer un arreglo con generator
+
+function* iterate(array){
+    for(let value of array){
+        yield value
+    }
+}
+
+const it = iterate(["Gian", 2, "Jose", 4, 5, 6, 7]);
+console.log(it.next().value);
+console.log(it.next().value);
+console.log(it.next().value);
